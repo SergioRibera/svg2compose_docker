@@ -4,6 +4,7 @@
     <img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/sergioribera/svg2compose">
     <img alt="Docker Image Size with architecture (latest by date/latest semver)" src="https://img.shields.io/docker/image-size/sergioribera/svg2compose">
 </p>
+
 This is a project that tries to pack in a small container all the necessary and required to run a script that allows in a single command to convert a folder of svg files into a package of icons for compose using the [svg2compose](https://github.com/DevSrSouza/svg-to-compose) project.
 
 ## Version
