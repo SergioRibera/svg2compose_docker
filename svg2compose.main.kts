@@ -43,8 +43,8 @@ data class MyArgs(
 )
 
 fun parseArgs(args: Array<String>): MyArgs {
-    var source = ""
-    var destination = ""
+    var source = "/source"
+    var destination = "/out"
     var accessorName = "AppIcons"
     var pkg = "icons"
     var allName = "AllIcons"
@@ -89,7 +89,9 @@ fun parseArgs(args: Array<String>): MyArgs {
         }
     }
 
-    if (source.isEmpty() || destination.isEmpty()) {
+    if (source.isEmpty() || destination.isEmpty() ||
+        accessorName.isEmpty() || pkg.isEmpty() ||
+        allName.isEmpty()) {
         printHelp()
         System.exit(0)
     }
@@ -99,8 +101,8 @@ fun parseArgs(args: Array<String>): MyArgs {
 
 fun printHelp() {
     println("Usage:")
-    println("  -s, --source        Source folder name")
-    println("  -o, --output        Destination folder name")
+    println("  -s, --source        Source folder name (default: /source)")
+    println("  -o, --output        Destination folder name (default: /out)")
     println("  -n, --name          Accessor Name (default: AppIcons)")
     println("  -p, --package       Icons package to create (default: icons)")
     println("  -a, --all-name      Name for all assets (default: AllIcons)")
